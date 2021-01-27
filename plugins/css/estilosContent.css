@@ -1,0 +1,174 @@
+/* CSS Universal */
+* {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    letter-spacing: 0.05em;
+
+    outline: none !important;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    background-color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    filter: invert(1);
+}
+  
+input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: .3;
+    pointer-events: all;
+}
+
+body{
+    --color-oficial: #EE5E53;
+    --color-bg-oficial: #1D1D1D;
+
+    background-color: var(--color-bg-oficial);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.bg-back-oficial{
+    background-color: #1D1D1D;
+}
+
+.bg-back-second{
+    background-color: rgba(97, 96, 96, 0.2);
+}
+
+.backdrop-blur{
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/*
+.oscuro{
+    background-color: #1f1f1f;
+    color: #f1eded;
+}
+*/
+/* CSS Universal */
+
+
+/* CSS Sliders - Hero */
+.sliders{
+    background-position: center center; 
+    height: 600px;
+}
+
+.sombra{
+    background-color: rgba(29, 29, 29, .6);
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 1;
+    right: 0;
+    left: 1;
+}
+
+.owl-dot {
+    margin: 0px !important;
+    outline: none !important;
+}
+
+.owl-dot span {
+    background-color: rgba(233, 233, 233, 0.5) !important;
+    width: 30px !important;
+    height: 5px !important;
+
+    transition-delay: 100ms ease;
+    transition: 100ms ease;
+}
+
+.owl-dot span:hover {
+    background-color: #EE5E53 !important;
+    width: 30px !important;
+    height: 5px !important;
+
+    transition-delay: 100ms ease;
+    transition: 100ms ease;
+}
+
+.owl-dot.active span {
+    background-color: #EE5E53 !important;
+    width: 30px !important;
+    height: 5px !important;
+}
+/* CSS Sliders - Hero */
+
+
+/* Contenido CSS */
+.genero{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+figure{
+    transition: all 400ms ease-in-out;
+}
+
+figure:hover .sombra-content{
+    display: inline-flex;
+}
+
+.sombra-content{
+    display: none;
+}
+
+.img-movie{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.98);
+}
+
+.play-btn{
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0% {
+    transform: scale(.99);
+    box-shadow: 0 0 0 0 rgba(256, 256, 256, .5);
+    }
+    70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(256, 256, 256, 0);
+    }
+    100% {
+    transform: scale(.99);
+    box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
+/* Contenido CSS */
+
+
+/* Estilos CSS del Reproductor */
+.contentMovie {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* Estilos CSS del Reproductor */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}

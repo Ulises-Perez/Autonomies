@@ -1,0 +1,169 @@
+RewriteEngine On
+RewriteRule ^Movie/([0-9]+)/?$ movie.php?id=$1
+RewriteRule ^popular/([0-9]+)/?$ mostwatched.php?page=$1
+RewriteRule ^genre/([0-9]+)/([0-9]+)/?$ genre.php?genre=$1&page=$2
+RewriteRule ^year/([0-9]+)/([0-9]+)/?$ year.php?year=$1&page=$2
+RewriteRule ^upcoming/([0-9]+)/?$ upcoming.php?page=$1
+
+By Genres
+https://api.themoviedb.org/3/discover/movie?api_key='.TMDB_KEY.'&language=es-ES&sort_by=primary_release_date.desc&page=1&with_genres=28
+
+By Year's
+https://api.themoviedb.org/3/discover/movie?api_key='.TMDB_KEY.'&language=es-ES&sort_by=release_date.desc&primary_release_year=2000&page=1
+
+Search Movies
+https://api.themoviedb.org/3/search/movie?api_key='.TMDB_KEY.'&language=es-ES&query=Annabelle&page=1
+
+
+================================================
+
+$trailer = true;
+	if(isset($movie['videos']['results']) && !empty($movie['videos']['results'])){
+		$video = $movie['videos']['results'][0];
+	}else{
+		$video = false;
+	}
+	if($video !== false){
+		$key = $video['key'];
+		if($video['site'] == 'YouTube'){
+			$video = 'https://www.youtube.com/embed/';
+		}else{
+			$video = 'https://vimeo.com/embed/';
+		}
+		$video = $video.$key;
+		
+	}else{
+		$trailer = false;
+		$video = 'http://vidsrc.me/embed/'.$movie['imdb_id'].'/';
+	}
+
+================================================
+
+
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-flow: row wrap;
+-ms-flex-flow: row wrap;
+flex-flow: row wrap;
+
+------------------------------------------------------
+{
+  "genres": [
+    {
+      "id": 28,
+      "name": "Acción"
+    },
+    {
+      "id": 12,
+      "name": "Aventura"
+    },
+    {
+      "id": 16,
+      "name": "Animación"
+    },
+    {
+      "id": 35,
+      "name": "Comedia"
+    },
+    {
+      "id": 80,
+      "name": "Crimen"
+    },
+    {
+      "id": 99,
+      "name": "Documental"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Familia"
+    },
+    {
+      "id": 14,
+      "name": "Fantasía"
+    },
+    {
+      "id": 36,
+      "name": "Historia"
+    },
+    {
+      "id": 27,
+      "name": "Terror"
+    },
+    {
+      "id": 10402,
+      "name": "Música"
+    },
+    {
+      "id": 9648,
+      "name": "Misterio"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 878,
+      "name": "Ciencia ficción"
+    },
+    {
+      "id": 10770,
+      "name": "Película de TV"
+    },
+    {
+      "id": 53,
+      "name": "Suspense"
+    },
+    {
+      "id": 10752,
+      "name": "Bélica"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
+}
+---------------------------------------------------------------------------------------------------------------------------
+{"28":"Acci\u00f3n","12":"Aventura","16":"Animaci\u00f3n","35":"Comedia","80":"Crimen","99":"Documental","18":"Drama","10751":"Familia","14":"Fantas\u00eda","36":"Historia","27":"Terror","10402":"M\u00fasica","9648":"Misterio","10749":"Romance","878":"Ciencia ficci\u00f3n","10770":"Pel\u00edcula de TV","53":"Suspense","10752":"B\u00e9lica","37":"Western"}
+
+TAMANOS DISPONIBLES: "w92", "w154", "w185", "w342", "w500", "w780", or "original"
+https://image.tmdb.org/t/p/(SIZE)/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg
+
+
+//Escaneamos el directorio del proyecto
+
+    foreach( scandir('./') as $file_name){
+
+        //Vericamos si el nombre del archivo termina en .html
+
+        if(preg_match('/\.html$/', $file_name)){
+
+            //Creamos el nuevo nombre del archivo
+
+            $NuevoNombre = explode('.', $file_name)[0].'.php';
+
+            //Renombramos el archivo
+
+            rename($file_name, $NuevoNombre);
+
+        }
+
+    }
+
+
+ ENLACES DE LA API:
+
+Detalles de una pelicula:
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+Top Rated - Mejor Valoradas
+https://api.themoviedb.org/3/movie/top_rated?api_key=<<api_key>>&language=en-US&page=1
+Popular - Populares
+https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
+Upcoming - PrÛximos
+https://api.themoviedb.org/3/movie/upcoming?api_key=<<api_key>>&language=en-US&page=1
