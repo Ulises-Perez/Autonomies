@@ -20,7 +20,7 @@
                         <?php
                             foreach ($mpContent as $movies){
                                 if($movies['vote_average'] != "0" && !empty($movies['poster_path'])){
-                                echo   '<a href="../Movie/'.$movies['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
+                                echo   '<a href="contenido.php?id='.$movies['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
                                             <div class="poster relative">
                                                 <img class="w-full h-full rounded" src="https://image.tmdb.org/t/p/w300/'.$movies['poster_path'].'" alt="'.$movies['title'].'">
                                                 <div class="sombra-content absolute inset-0 flex justify-center items-center rounded">
@@ -52,7 +52,7 @@
                                     if($_GET['page'] > 1){
                                         ?>
                                         <li>
-                                            <a href="./<?=$_GET['page']-1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
+                                            <a href="./peliculas.php?page=<?=$_GET['page']-1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
                                             <i class="fas fa-chevron-left -ml-px"></i>
                                             </a>
                                         </li>
@@ -68,12 +68,12 @@
                                     if($_GET['page'] < 500 ){
                                         ?>
                                         <li>
-                                            <a href="./<?=$_GET['page']+1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
+                                            <a href="./peliculas.php?page=<?=$_GET['page']+1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
                                                 <?=$_GET['page']+1?>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="./<?=$_GET['page']+1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
+                                            <a href="./peliculas.php?page=<?=$_GET['page']+1?>" class="first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-red-500 bg-white text-red-500">
                                             <i class="fas fa-chevron-right -mr-px"></i>
                                             </a>
                                         </li>
@@ -94,7 +94,7 @@
         include('templates/pageUniversal/footer.php');
         include('urls/urlUniversal/scripts.php');
     ?>
-    <script src="../plugins/js/script.js"></script>
+    <script src="plugins/js/script.js"></script>
     <!-- FOOTER & JS UNIVERSAL -->
 </body>
 </html>

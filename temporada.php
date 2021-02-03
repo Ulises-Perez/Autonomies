@@ -22,7 +22,7 @@
               <img src="https://image.tmdb.org/t/p/w342<?=$contentS['poster_path']?>"
                 class="w-80 md:w-auto rounded" alt="" />
                 <div class="hidden lg:block absolute top-0 right-0 rounded flex items-center justify-center">
-                  <a href="../Serie/<?=$contentS['id']?>">
+                  <a href="cseries.php?id=<?=$contentS['id']?>">
                     <button class="bg-red-500 text-white px-3 py-2 rounded-bl rounded-tr outline-none focus:outline-none">
                       <i class="fas fa-list-ul"></i>
                     </button>
@@ -53,7 +53,7 @@
                         echo '<div class="block" id="'.$ntemporada.'">';
                               echo '<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">';
                                 foreach($contentEpisodesS['episodes'] as $episodios){
-                                  echo '<form class="w-full" method="post" action="../Episodio/'.$contentS['id'].'">
+                                  echo '<form class="w-full" method="post" action="episodio.php?id='.$contentS['id'].'">
                                   <input class="hidden" type="text" name="numeroEpisodio" value="'.$episodios['episode_number'].'">
                                   <input class="hidden" type="text" name="numeroTemporada" value="'.$episodios['season_number'].'">
                                   <div class="gap-4">
@@ -84,7 +84,7 @@
                         foreach($contentS['seasons'] as $temporadas){
                             echo '<div class="block" id="'.$temporadas['season_number'].'">
                                     <div class="flex gap-2">
-                                        <form class="w-full" method="post" action="../Temporada/'.$contentS['id'].'">
+                                        <form class="w-full" method="post" action="temporada.php?id='.$contentS['id'].'">
                                           <input class="hidden" type="text" name="numeroEpisodio" value="'.$episodios['episode_number'].'">
                                           <input class="hidden" type="text" name="numeroTemporada" value="'.$temporadas['season_number'].'">
                                           <div class="gap-4">

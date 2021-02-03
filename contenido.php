@@ -288,7 +288,7 @@
     include('urls/urlUniversal/scripts.php');
   ?>
 
-  <script src="../plugins/js/script.js"></script>
+  <script src="plugins/js/script.js"></script>
 </body>
 
 </html>

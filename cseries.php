@@ -1,6 +1,7 @@
 <?php
     require 'urls/apis/api_content_series.php';
     require 'config/pageContenido/config.php';
+    //phpinfo();
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +101,7 @@
                         foreach($contentS['seasons'] as $temporadas){
                             echo '<div class="block" id="'.$temporadas['season_number'].'">
                                     <div class="flex gap-2">
-                                        <form class="w-full" method="post" action="../Temporada/'.$contentS['id'].'">
+                                        <form class="w-full" method="post" action="temporada.php?id='.$contentS['id'].'">
                                           <input class="hidden" type="text" name="numeroEpisodio" value="'.$episodios['episode_number'].'">
                                           <input class="hidden" type="text" name="numeroTemporada" value="'.$temporadas['season_number'].'">
                                           <div class="gap-4">
@@ -247,7 +248,7 @@
       document.getElementById(tabID).classList.add("block");
     }
   </script>
-  <script src="../plugins/js/script.js"></script>
+  <script src="plugins/js/script.js"></script>
 </body>
 
 </html>

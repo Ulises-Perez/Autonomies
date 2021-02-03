@@ -21,5 +21,5 @@
 
   <link rel="icon" href="https://www.themoviedb.org/assets/2/favicon-32x32-543a21832c8931d3494a68881f6afcafc58e96c5d324345377f3197a37b367b5.png" type="image/png" />
   <!-- Estilos Propios -->
-  <link rel="stylesheet" href="../plugins/css/estilosContent.css" />
+  <link rel="stylesheet" href="plugins/css/estilosContent.css" />
 </head>

@@ -39,15 +39,15 @@
                 class="hidden bg-back-oficial text-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
                 style="min-width: 12rem" id="dropdown-id">
                 <a class="px-3 py-2 flex items-center text-sm leading-snug bg-white bg-opacity-0 hover:bg-opacity-25"
-                  href="Home">
+                  href="index.php">
                   Inicio
                 </a>
                 <a class="px-3 py-2 flex items-center text-sm leading-snug bg-white bg-opacity-0 hover:bg-opacity-25"
-                  href="Peliculas/1">
+                  href="peliculas.php?page=1">
                   Películas
                 </a>
                 <a class="px-3 py-2 flex items-center text-sm leading-snug bg-white bg-opacity-0 hover:bg-opacity-25"
-                  href="Tv/1">
+                  href="series.php?page=1">
                   Series
                 </a>
               </div>
@@ -67,19 +67,19 @@
                 </form>
                 <li class="nav-item">
                   <a class="px-3 py-2 flex items-center text-xs uppercase leading-snug rounded bg-white bg-opacity-0 hover:bg-opacity-25"
-                    href="Home">
+                    href="index.php">
                     Inicio
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="px-3 py-2 flex items-center text-xs uppercase leading-snug rounded bg-white bg-opacity-0 hover:bg-opacity-25"
-                    href="Peliculas/1">
+                    href="peliculas.php?page=1">
                     Películas
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="px-3 py-2 flex items-center text-xs uppercase leading-snug rounded bg-white bg-opacity-0 hover:bg-opacity-25"
-                    href="Tv/1">
+                    href="series.php?page=1">
                     Series
                   </a>
                 </li>

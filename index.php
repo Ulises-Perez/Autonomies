@@ -38,7 +38,7 @@
                                             <p class="text-base md:text-xl mb-10 leading-none">
                                                 '.$descC.'
                                             </p>
-                                            <a href="Movie/'.$mvMovies['id'].'"
+                                            <a href="contenido.php?id='.$mvMovies['id'].'"
                                                 class="bg-red-500 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800 transition duration-300 ease-in-out">
                                                 <i class="fas fa-play mr-2"></i> Reproducir
                                             </a>
@@ -89,7 +89,7 @@
                             $i=0;
                             foreach ($npContent as $npMovies){
                                 if($i++ >= 12) break;
-                                echo   '<a href="Movie/'.$npMovies['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
+                                echo   '<a href="contenido.php?id='.$npMovies['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
                                             <div class="poster relative">
                                                 <img class="w-full h-full rounded" src="https://image.tmdb.org/t/p/w300/'.$npMovies['poster_path'].'" alt="'.$npMovies['title'].'">
                                                 <div class="sombra-content absolute inset-0 flex justify-center items-center rounded">
@@ -119,7 +119,7 @@
                             $i=0;
                             foreach ($seContent as $sEstrenos){
                                 if($i++ >= 12) break;
-                                echo   '<a href="Serie/'.$sEstrenos['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
+                                echo   '<a href="cseries.php?id='.$sEstrenos['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
                                             <div class="poster relative">
                                                 <img class="w-full h-full rounded" src="https://image.tmdb.org/t/p/w300/'.$sEstrenos['poster_path'].'" alt="'.$sEstrenos['name'].'">
                                                 <div class="sombra-content absolute inset-0 flex justify-center items-center rounded">

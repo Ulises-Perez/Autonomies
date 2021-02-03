@@ -35,7 +35,7 @@
                             if(!empty($bSContent)){
                                 foreach($bSContent as $busquedaS){
                                     if($busquedaS['vote_average'] != "0" && !empty($busquedaS['poster_path'])){
-                                        echo '<a href="Serie/'.$busquedaS['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
+                                        echo '<a href="cseries.php?id='.$busquedaS['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
                                                 <div class="poster relative">
                                                     <img class="w-full h-full rounded" src="https://image.tmdb.org/t/p/w300/'.$busquedaS['poster_path'].'" alt="'.$busquedaS['name'].'">
                                                     <div class="sombra-content absolute inset-0 flex justify-center items-center rounded">
@@ -75,7 +75,7 @@
                             if(!empty($bContent)){
                                 foreach($bContent as $busqueda){
                                     if($busqueda['vote_average'] != "0" && !empty($busqueda['poster_path'])){
-                                        echo '  <a href="Movie/'.$busqueda['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
+                                        echo '  <a href="peliculas.php?id='.$busqueda['id'].'" class="item tilt-poster transform hover:scale-105 transition duration-300 ease-in-out">
                                                     <div class="poster relative">
                                                         <img class="w-full h-full rounded" src="https://image.tmdb.org/t/p/w300/'.$busqueda['poster_path'].'" alt="'.$busqueda['title'].'">
                                                         <div class="sombra-content absolute inset-0 flex justify-center items-center rounded">
